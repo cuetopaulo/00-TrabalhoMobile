@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B0C4DE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/idTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="33dp"
+        android:text="Jogo da Matemática"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/idTextResolvaAconta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idTextResolvaAconta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="118dp"
+        android:text="Resolva a conta:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitulo" />
+
+    <TextView
+        android:id="@+id/idNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="55"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/idTextMais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTitulo" />
+
+    <TextView
+        android:id="@+id/idTextMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="+"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/idNum2"
+        app:layout_constraintStart_toEndOf="@+id/idNum1"
+        app:layout_constraintTop_toBottomOf="@+id/idTextResolvaAconta" />
+
+    <TextView
+        android:id="@+id/idNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="55"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/idTextIgual"
+        app:layout_constraintStart_toEndOf="@+id/idTextMais"
+        app:layout_constraintTop_toBottomOf="@+id/idTextResolvaAconta" />
+
+    <TextView
+        android:id="@+id/idTextIgual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="8dp"
+        android:text="="
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/idNumRes"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toEndOf="@+id/idNum2"
+        app:layout_constraintTop_toBottomOf="@+id/idTextResolvaAconta" />
+
+    <EditText
+        android:id="@+id/idNumRes"
+        android:layout_width="93dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="number"
+        android:text="200"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idTextIgual"
+        app:layout_constraintTop_toBottomOf="@+id/idTextResolvaAconta" />
+
+    <TextView
+        android:id="@+id/idResCorreta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="A resposta correta é 300"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoEnviaRes" />
+
+    <Button
+        android:id="@+id/botaoEnviaRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="98dp"
+        android:onClick="enviarResposta"
+        android:text="enviar resposta"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idNumRes" />
+
+    <Button
+        android:id="@+id/botaoProx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="proximo"
+        android:text="PRÓXIMO"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idResCorreta" />
+
+    <Button
+        android:id="@+id/botaoFinalizar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="144dp"
+        android:backgroundTint="#FFEB3B"
+        android:onClick="finalizar"
+        android:text="FINALIZAR"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoProx" />
+
+    <TextView
+        android:id="@+id/idTextNotaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="129dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="A sua nota foi:"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botaoFinalizar" />
+
+    <TextView
+        android:id="@+id/idNotaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="179dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="80"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTextNotaFinal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
